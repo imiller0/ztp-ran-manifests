@@ -1,0 +1,13 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PlacementBinding
+metadata:
+  name: binding-cnfdt17-site-autolabeler
+  namespace: cnfdt17-site-subscription
+placementRef:
+  name: placement-cnfdt17-site-autolabeler
+  kind: PlacementRule
+  apiGroup: apps.open-cluster-management.io
+subjects:
+- name: cnfdt17-site-autolabeler
+  kind: Policy
+  apiGroup: policy.open-cluster-management.io

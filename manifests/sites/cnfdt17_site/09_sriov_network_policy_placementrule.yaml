@@ -1,0 +1,9 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: placement-policy-cnfdt17-site-sriov-network
+  namespace: cnfdt17-site-subscription
+spec:
+  clusterSelector:
+    matchExpressions:
+      - {key: name, operator: In, values: ["cnfdt17-cluster"]}
