@@ -1,0 +1,13 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PlacementBinding
+metadata:
+  name: binding-cu-cnfde2-autolabeler
+  namespace: cu-cnfde2-subscription
+placementRef:
+  name: placement-cu-cnfde2-autolabeler
+  kind: PlacementRule
+  apiGroup: apps.open-cluster-management.io
+subjects:
+- name: cu-cnfde2-autolabeler
+  kind: Policy
+  apiGroup: policy.open-cluster-management.io

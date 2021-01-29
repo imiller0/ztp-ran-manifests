@@ -1,7 +1,13 @@
+#!/usr/bin/env bash
+
+CLUSTER_NAME=$1
+PROFILE=$2
+
+cat << EOF > ./$CLUSTER_NAME.yaml
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: sample-cu-cluster
+  name: $CLUSTER_NAME-cluster
 ---
 apiVersion: cluster.open-cluster-management.io/v1
 kind: ManagedCluster
@@ -9,20 +15,20 @@ metadata:
   labels:
     cloud: auto-detect
     vendor: auto-detect
-    name: sample-cu-cluster
-    profile: cu
-  name: sample-cu-cluster
+    name: $CLUSTER_NAME-cluster
+    profile: $PROFILE
+  name: $CLUSTER_NAME-cluster
 spec:
   hubAcceptsClient: true
 ---
 apiVersion: agent.open-cluster-management.io/v1
 kind: KlusterletAddonConfig
 metadata:
-  name: sample-cu-cluster
-  namespace: sample-cu-cluster
+  name: $CLUSTER_NAME-cluster
+  namespace: $CLUSTER_NAME-cluster
 spec:
-  clusterName: sample-cu-cluster
-  clusterNamespace: sample-cu-cluster
+  clusterName: $CLUSTER_NAME-cluster
+  clusterNamespace: $CLUSTER_NAME-cluster
   clusterLabels:
     cloud: auto-detect
     vendor: auto-detect
@@ -37,3 +43,6 @@ spec:
   iamPolicyController:
     enabled: true
   version: 2.1.0
+EOF
+
+echo "  - "$CLUSTER_NAME".yaml" >> ./kustomization.yaml
