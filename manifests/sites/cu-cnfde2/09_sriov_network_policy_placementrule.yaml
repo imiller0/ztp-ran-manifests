@@ -6,4 +6,4 @@ metadata:
 spec:
   clusterSelector:
     matchExpressions:
-      - {key: name, operator: In, values: ["cu-cnfde2"]}
+      - {key: name, operator: In, values: ["cu-cnfde2-cluster"]}
