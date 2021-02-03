@@ -1,9 +1,0 @@
-apiVersion: apps.open-cluster-management.io/v1
-kind: PlacementRule
-metadata:
-  name: placement-policy-cu-cnfde2-sriov-network
-  namespace: cu-cnfde2-subscription
-spec:
-  clusterSelector:
-    matchExpressions:
-      - {key: name, operator: In, values: ["cu-cnfde2-cluster"]}

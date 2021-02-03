@@ -1,8 +1,8 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
-  name: cu-cnfde2-sriov-nnode-policy
-  namespace: cu-cnfde2-subscription
+  name: cnfde2-cu-sriov-nnode-policy
+  namespace: cnfde2-cu-subscription
   annotations:
     policy.open-cluster-management.io/standards: NIST SP 800-53
     policy.open-cluster-management.io/categories: CM Configuration Management
@@ -15,7 +15,7 @@ spec:
         apiVersion: policy.open-cluster-management.io/v1
         kind: ConfigurationPolicy
         metadata:
-          name: cu-cnfde2-sriov-nnode-policy-config
+          name: cnfde2-cu-sriov-nnode-policy-config
         spec:
           remediationAction: enforce # the policy-template spec.remediationAction is overridden by the preceding parameter value for spec.remediationAction.
           severity: low
@@ -76,8 +76,8 @@ spec:
                 spec:
                 # This works for Intel based NICs.
                 # For Mellanox please change to:
-                #     deviceType: netdevice/ vfio-pci
-                #     isRdma: true/ false
+                #     deviceType: netdevice
+                #     isRdma: true
                   deviceType: netdevice
                   isRdma: true
                   nicSelector:
