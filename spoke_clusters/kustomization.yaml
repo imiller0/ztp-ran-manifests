@@ -3,5 +3,4 @@ kind: Kustomization
 resources:
   - 01_sample_site_cu_cluster.yaml
   - 02_sample_site_du_cluster.yaml
-  - du-cnfde2.yaml
-  - cu-cnfde2.yaml
+  - cnfde2-cu.yaml

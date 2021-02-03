@@ -1,9 +1,0 @@
-apiVersion: apps.open-cluster-management.io/v1
-kind: PlacementRule
-metadata:
-  name: placement-du-cnfde2-autolabeler
-  namespace: du-cnfde2-subscription
-spec:
-  clusterSelector:
-    matchExpressions:
-      - {key: name, operator: In, values: ["du-cnfde2-cluster"]}
