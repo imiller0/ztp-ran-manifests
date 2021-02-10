@@ -58,4 +58,8 @@ EOF
 
 echo "  - "$CLUSTER_NAME".yaml" >> ./spoke_clusters/kustomization.yaml
 
+<<<<<<< HEAD
 echo "still need to modify sites/"$CLUSTER_NAME"/04_sriov_network_node_policy.yaml with intf names that match your cluster info"
+=======
+echo "still need to modify sites/"$CLUSTER_NAME"/04_sriov_network_node_policy.yaml with intf names that match your cluster info"
+>>>>>>> 4bf835a469919a7a0349848c326508971193ecef
