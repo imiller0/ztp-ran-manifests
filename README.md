@@ -14,8 +14,4 @@ The purpose of this repository is to contain all the RAN manifests that is used 
 
 - You need to modify the complianceType/spec section in the 04_sriov_network_node_policy.yaml file under manifest/sites/{with_YOUR_CLUSTER_NAME} with the intf name and type that match your cluster nodes.
 
-<<<<<<< HEAD
 - Finally you need to upload the generated files to the ztp-ran-manifest repository you forked as we mentioned above.
-=======
-- Finally you need to upload the generated files to the ztp-ran-manifest repository you forked as we mentioned above.
->>>>>>> 4bf835a469919a7a0349848c326508971193ecef
