@@ -1,0 +1,9 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: placement-cnfde9-du-sriov-nnode-policy
+  namespace: cnfde9-du-subscription
+spec:
+  clusterSelector:
+    matchExpressions:
+      - {key: name, operator: In, values: ["cnfde9-du-cluster"]}

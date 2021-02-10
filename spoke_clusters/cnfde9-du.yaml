@@ -1,7 +1,7 @@
-piVersion: v1
+apiVersion: v1
 kind: Namespace
 metadata:
-  name: cnfde2-cu-cluster
+  name: cnfde9-du-cluster
 ---
 apiVersion: cluster.open-cluster-management.io/v1
 kind: ManagedCluster
@@ -9,20 +9,20 @@ metadata:
   labels:
     cloud: auto-detect
     vendor: auto-detect
-    name: cnfde2-cu-cluster
-    profile: cu
-  name: cnfde2-cu-cluster
+    name: cnfde9-du-cluster
+    profile: du
+  name: cnfde9-du-cluster
 spec:
   hubAcceptsClient: true
 ---
 apiVersion: agent.open-cluster-management.io/v1
 kind: KlusterletAddonConfig
 metadata:
-  name: cnfde2-cu-cluster
-  namespace: cnfde2-cu-cluster
+  name: cnfde9-du-cluster
+  namespace: cnfde9-du-cluster
 spec:
-  clusterName: cnfde2-cu-cluster
-  clusterNamespace: cnfde2-cu-cluster
+  clusterName: cnfde9-du-cluster
+  clusterNamespace: cnfde9-du-cluster
   clusterLabels:
     cloud: auto-detect
     vendor: auto-detect

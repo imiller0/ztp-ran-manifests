@@ -1,13 +1,13 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
-  name: cnfde2-cu-sriov-nnode-policy
-  namespace: cnfde2-cu-subscription
+  name: binding-cnfde9-du-sriov-nnode-policy
+  namespace: cnfde9-du-subscription
 placementRef:
-  name: placement-cnfde2-cu-sriov-nnode-policy
+  name: placement-cnfde9-du-sriov-nnode-policy
   kind: PlacementRule
   apiGroup: apps.open-cluster-management.io
 subjects:
-- name: cnfde2-cu-sriov-nnode-policy
+- name: cnfde9-du-sriov-nnode-policy
   kind: Policy
   apiGroup: policy.open-cluster-management.io
