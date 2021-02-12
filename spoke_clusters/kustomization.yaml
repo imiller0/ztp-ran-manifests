@@ -5,3 +5,4 @@ resources:
   - 02_sample_site_du_cluster.yaml
   - cnfde6-cu.yaml
   - cnfde9-du.yaml
+  - cnfdt17.yaml

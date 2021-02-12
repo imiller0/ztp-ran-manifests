@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cnfdt17-cluster
+---
+apiVersion: cluster.open-cluster-management.io/v1
+kind: ManagedCluster
+metadata:
+  labels:
+    cloud: auto-detect
+    vendor: auto-detect
+    name: cnfdt17-cluster
+    profile: du
+  name: cnfdt17-cluster
+spec:
+  hubAcceptsClient: true
+---
+apiVersion: agent.open-cluster-management.io/v1
+kind: KlusterletAddonConfig
+metadata:
+  name: cnfdt17-cluster
+  namespace: cnfdt17-cluster
+spec:
+  clusterName: cnfdt17-cluster
+  clusterNamespace: cnfdt17-cluster
+  clusterLabels:
+    cloud: auto-detect
+    vendor: auto-detect
+  applicationManager:
+    enabled: true
+  policyController:
+    enabled: true
+  searchCollector:
+    enabled: true
+  certPolicyController:
+    enabled: true
+  iamPolicyController:
+    enabled: true
+  version: 2.1.0
